@@ -114,7 +114,7 @@ class RegisterValidation:
                 r"([A-Za-z0-9]+[.-_])*[A-Za-z0-9]+@[A-Za-z0-9-]+(\.[A-Z|a-z]{2,})+"
             )
             self.uuid = self.user.uuid_
-            self.userdata = UserData()
+            self.userdata = UserD ata()
             self.bcrypt_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
         except Exception as e:
             raise e

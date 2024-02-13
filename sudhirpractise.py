@@ -36,14 +36,19 @@ class AppException(Exception):
 
         return error_message
 
-    def __repr__(self):
-        """
-        Formating object of AppException
-        """
-        return AppException.__name__.__str__()
+
 
     def __str__(self):
         """
         Formating how a object should be visible if used in print statement.
         """
         return self.error_message
+
+
+def authenticate_user_login():
+    try:
+        
+        print(10/0)
+    except Exception as e:
+            raise AppException(e, sys) from e
+authenticate_user_login()
